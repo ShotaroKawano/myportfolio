@@ -43,8 +43,11 @@
       </v-container>
     </section>
     <section id="skills">
+      <h2 class="section-title">Skills</h2>
     </section>
-    <section id="about-me"></section>
+    <section id="about-me">
+      <h2 class="section-title">About me</h2>
+    </section>
   </div>
 </template>
 
@@ -95,6 +98,12 @@ export default {
           period: '2020年4月~2020年10月',
           overview: 'プロダクトデモ、アントレプレナーシップについて学習',
           thumnail: 'gs-tokyo.png'
+        },
+        {
+          title: 'M&A アドバイザリー企業',
+          period: '2020年3月',
+          overview: 'WordPressにてコーポレイトサイト作成 \n多言語化対応',
+          thumnail: 'icp-capital-investment.png'
         },
         {
           title: '製造業企業在庫管理システム刷新',
