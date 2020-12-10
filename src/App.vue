@@ -41,7 +41,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
       <v-btn text>Products</v-btn>
-      <v-btn text>Projects(準備中)</v-btn>
+      <v-btn text>Projects</v-btn>
       <v-btn text>Skills(準備中)</v-btn>
       <v-btn text>About me(準備中)</v-btn>
       <!-- <v-menu offset-y>

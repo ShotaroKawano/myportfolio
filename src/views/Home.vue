@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <section id="mv">
       <h1 class="mv-msg"><span class="name">Shotaro Kawano</span><br>- works introduction -</h1>
     </section>
@@ -91,10 +91,28 @@ export default {
       ],
       projects: [
         {
+          title: "G'S ACADEMY TOKYO",
+          period: '2020年4月~2020年10月',
+          overview: 'プロダクトデモ、アントレプレナーシップについて学習',
+          thumnail: 'gs-tokyo.png'
+        },
+        {
+          title: '製造業企業在庫管理システム刷新',
+          period: '2019年1月~2019年9月',
+          overview: '製造業企業の倉庫・店舗の在庫管理システムの刷新プロジェクトにてアプリ領域を開発 \nシステム内のユーザ権限の要件定義と実装を担当 \n主に旧システムをリバースエンジニアリングして開発',
+          thumnail: 'warehouse.jpg'
+        },
+        {
+          title: 'メディア企業・製造業企業業務RPA化',
+          period: '2018年6月~2019年1月',
+          overview: '働き方改革の一環として業務RPA化を実施 \nヒアリング・業務プロセス分析・簡易なBPR・要件定義・設計・開発を担当 \n500h/年の業務時間削減に成功。',
+          thumnail: 'rpa.jpg'
+        },
+        {
           title: '官公庁向け大規模システムのアーキテクチャ構築',
           period: '2017年9月~2018年5月',
           overview: 'IF領域のアーキテクチャの詳細設計・開発・単体・結合テスト・後続開発フェーズ向けドキュメント作成 \nオフショア開発のため英語にて業務遂行',
-          thumnail: '488262888'
+          thumnail: 'government-office.jpg'
         }
       ]
     }
@@ -106,6 +124,10 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  background-color: #eee;
+}
+
 #mv {
   width: 100%;
   height: 200px;

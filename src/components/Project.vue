@@ -5,7 +5,7 @@
     height="400px"
   >
     <v-img
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+      :src="this.requireImg()"
       height="200px"
     ></v-img>
 
@@ -24,14 +24,13 @@
       {{ overview }}
     </v-card-text>
 
-    <v-card-actions>
+    <!-- <v-card-actions>
       <v-btn
         color="orange lighten-2"
         text
         @click="show = !show"
       >
         more
-        <!-- site -->
       </v-btn>
 
       <v-spacer></v-spacer>
@@ -42,7 +41,7 @@
       >
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
-    </v-card-actions>
+    </v-card-actions> -->
 
     <v-expand-transition>
       <div v-show="show">
@@ -80,10 +79,16 @@ export default {
   },
   data: () => ({
     show: false,
-    vimeoUrl: ''
+    vimeoUrl: '',
+    image_src: ''
   }),
   created: function () {
     this.vimeoUrl = 'https://player.vimeo.com/video/' + this.videoId
+  },
+  methods: {
+    requireImg () {
+      return require('@/assets/' + this.thumnail)
+    }
   }
 }
 </script>
