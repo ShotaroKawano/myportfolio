@@ -59,6 +59,24 @@
     </section>
     <section id="about-me">
       <h2 class="section-title">About me</h2>
+      <div class="frame">
+        <div class="icon"></div>
+        <div class="introduction">
+          <div class="intro-name">
+            <p>川野翔太郎  Shotaro Kawano</p>
+          </div>
+          <div class="history">
+            <p>埼玉出身 1994年生まれ</p>
+            <p>Accenture卒</p>
+            <p>立教大学理学部数学科主席卒業</p>
+          </div>
+          <div class="career">
+            <p>大学卒業後、2017年にアクセンチュア入社</p>
+            <p>システム開発・コンサルティング業務を経験し、退職</p>
+            <p>ジーズアカデミー lab9期</p>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -179,4 +197,42 @@ export default {
   margin: 0 auto;
 }
 
+#about-me {
+  padding-bottom: 50px;
+}
+
+.frame {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.icon {
+  width: 50%;
+  height: 400px;
+  background-image: url(~@/assets/profile.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.introduction {
+  width: 50%;
+  padding: 24px;
+}
+
+.intro-name {
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+.history {
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.career {
+  line-height: 1;
+}
 </style>

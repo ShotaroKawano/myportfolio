@@ -42,8 +42,8 @@
       <v-toolbar-items>
       <v-btn text>Products</v-btn>
       <v-btn text>Projects</v-btn>
-      <v-btn text>Skills(準備中)</v-btn>
-      <v-btn text>About me(準備中)</v-btn>
+      <v-btn text>Skills</v-btn>
+      <v-btn text>About me</v-btn>
       <!-- <v-menu offset-y>
         <template v-slot:activator="{on}">
         <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
