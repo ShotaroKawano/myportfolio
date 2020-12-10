@@ -44,6 +44,18 @@
     </section>
     <section id="skills">
       <h2 class="section-title">Skills</h2>
+      <div class="wrapper">
+        <h3>- 概要</h3>
+        <p>ITコンサルタントとして、SI・業務のRPA化を経験しました。ジーズアカデミー在籍時にVue.jsとdjnagoでサービスを開発しました。起業家のアイデアを実現できるようフルスタックな能力をつけていきたいと考えています。</p>
+        <h3>- 言語</h3>
+        <p>Python | JavaScript | PHP | Java(少し)</p>
+        <h3>- フレームワーク</h3>
+        <p>django | Vue.js | Laravel</p>
+        <h3>- 受賞歴</h3>
+        <p>G's ACADEMY TOKYO Hackathon 準優勝</p>
+        <p>G's ACADEMY TOKYO- FUKUOKA 合同Hackathon 3位</p>
+        <p>G's ACADEMY TOKYO Hackathon(チーム開発) 準優勝</p>
+      </div>
     </section>
     <section id="about-me">
       <h2 class="section-title">About me</h2>
@@ -96,7 +108,7 @@ export default {
         {
           title: "G'S ACADEMY TOKYO",
           period: '2020年4月~2020年10月',
-          overview: 'プロダクトデモ、アントレプレナーシップについて学習',
+          overview: "プロダクトデモ、アントレプレナーシップについて学習 \nG's ACADEMY TOKYO Hackathon 準優勝 \nG's ACADEMY TOKYO-FUKUOKA 合同Hackathon 3位 \nG's ACADEMY TOKYO Hackathon(チーム開発) 準優勝",
           thumnail: 'gs-tokyo.png'
         },
         {
@@ -160,6 +172,11 @@ export default {
   font-size: 2rem;
   text-align: center;
   margin: 60px 0 30px 0;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
 }
 
 </style>
