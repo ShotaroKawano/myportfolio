@@ -10,7 +10,7 @@
           <v-col
             v-for="product in products"
             :key="product.title"
-            cols="12" sm="6" md="4" lg="3"
+            cols="12" sm="6" md="4" lg="4"
           >
           <Product
             :title="product.title"
@@ -23,7 +23,25 @@
         </v-row>
       </v-container>
     </section>
-    <section id="projects"></section>
+    <section id="projects">
+      <v-container>
+        <h2 class="section-title">Projects</h2>
+        <v-row>
+          <v-col
+            v-for="project in projects"
+            :key="project.title"
+            cols="12" sm="6" md="4" lg="4"
+          >
+          <Project
+            :title="project.title"
+            :period="project.period"
+            :overview="project.overview"
+            :thumnail="project.thumnail"
+          />
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
     <section id="skills">
     </section>
     <section id="about-me"></section>
@@ -32,10 +50,12 @@
 
 <script>
 import Product from '../components/Product'
+import Project from '../components/Project'
 
 export default {
   components: {
-    Product
+    Product,
+    Project
   },
   data () {
     return {
@@ -43,30 +63,38 @@ export default {
         {
           title: 'Sinapse',
           subtitle: 'ブックマークのシェアと検索ができるサービス',
-          videoId: '488219528',
+          technology: 'Vue.js/d3.js/django/ \ndjango REST framework',
           overview: '情報同士のつながりを表現するため、フローチャート×ブックマークのUIを採用 \n\nURL:https://sinapse-production.netlify.app/ \n\nloginID:test@test.com \nloginPass:test',
-          technology: 'Vue.js/d3.js/django/ \ndjango REST framework'
+          videoId: '488219528'
         },
         {
           title: 'BOPS',
           subtitle: 'スーパーでの買物時間を1分に',
-          videoId: '488214794',
+          technology: 'Laravel/Docker/EC2',
           overview: 'Buy Online Pick-up in Storeの略 \nスマホで事前注文しスーパーではピックアップするだけの想定で開発 \nwithコロナ時代の非接触での買い物、または子育て世帯の時短での買い物を実現するアプリ',
-          technology: 'Laravel/Docker/EC2'
+          videoId: '488214794'
         },
         {
           title: 'イベンタラクティブ',
           subtitle: 'イベントをインタラクティブに',
-          videoId: '488269804',
+          technology: 'JavaScript/Firebase/Semantic UI',
           overview: 'イベントや授業で参加者にチャットの質問が埋もれてしまわないよう、質問だけ抽出することができる \nまたスピーカーの声は自動で文字起こしされ、アンケート機能で参加の声を集め、リアルタイムでグラフ化可能 \n\nURL:https://shotaro009.sakura.ne.jp/Eventeractive/',
-          technology: 'JavaScript/Firebase/Semantic UI'
+          videoId: '488269804'
         },
         {
           title: 'XENO',
           subtitle: 'おうちでも一人でもXENO',
-          videoId: '488262888',
+          technology: 'JavaScript',
           overview: '中田敦彦さんが開発したカードゲームXENOをコンピューター対戦で再現 \n\nURL:https://shotaro009.sakura.ne.jp/xeno/',
-          technology: 'JavaScript'
+          videoId: '488262888'
+        }
+      ],
+      projects: [
+        {
+          title: '官公庁向け大規模システムのアーキテクチャ構築',
+          period: '2017年9月~2018年5月',
+          overview: 'IF領域のアーキテクチャの詳細設計・開発・単体・結合テスト・後続開発フェーズ向けドキュメント作成 \nオフショア開発のため英語にて業務遂行',
+          thumnail: '488262888'
         }
       ]
     }
@@ -100,7 +128,7 @@ export default {
 .section-title {
   font-size: 2rem;
   text-align: center;
-  margin: 30px 0;
+  margin: 60px 0 30px 0;
 }
 
 </style>
