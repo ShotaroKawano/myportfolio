@@ -40,26 +40,26 @@
       <v-toolbar-title to="/">MyPortfolio</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-      <v-btn text>Products</v-btn>
-      <v-btn text>Projects</v-btn>
-      <v-btn text>Skills</v-btn>
-      <v-btn text>About me</v-btn>
-      <!-- <v-menu offset-y>
-        <template v-slot:activator="{on}">
-        <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
-        </template>
-        <v-list>
-          <v-subheader>Get help</v-subheader>
-          <v-list-item v-for="support in supports" :key="support.name" :to="support.link">
-            <v-list-item-icon>
-            <v-icon>{{ support.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-            <v-list-item-title>{{ support.name }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-menu> -->
+        <v-btn text to="#products">Products</v-btn>
+        <v-btn text to="#projects">Projects</v-btn>
+        <v-btn text to="#skills">Skills</v-btn>
+        <v-btn text to="#about-me">About me</v-btn>
+        <!-- <v-menu offset-y>
+          <template v-slot:activator="{on}">
+          <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
+          </template>
+          <v-list>
+            <v-subheader>Get help</v-subheader>
+            <v-list-item v-for="support in supports" :key="support.name" :to="support.link">
+              <v-list-item-icon>
+              <v-icon>{{ support.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+              <v-list-item-title>{{ support.name }}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-menu> -->
       </v-toolbar-items>
     </v-app-bar>
 
@@ -141,6 +141,19 @@ export default {
           icon: 'mdi-vuetify'
         }
       ]
+    }
+  },
+  watch: {
+    $route: function (n, o) {
+      if (n.hash.match(/^#/)) {
+        document.getElementById(n.hash.replace(/^#/, '')).scrollIntoView()
+      }
+      console.log('new, old', [n.hash, o.hash])
+    }
+  },
+  mounted () {
+    if (this.$route.hash.match(/^#/)) {
+      document.getElementById(this.$route.hash.replace(/^#/, '')).scrollIntoView()
     }
   }
 }

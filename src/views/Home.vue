@@ -1,8 +1,10 @@
 <template>
   <div class="main">
+    <!-- mv -->
     <section id="mv">
       <h1 class="mv-msg"><span class="name">Shotaro Kawano</span><br>- works introduction -</h1>
     </section>
+    <!-- products -->
     <section id="products">
       <v-container>
         <h2 class="section-title">Products</h2>
@@ -23,6 +25,7 @@
         </v-row>
       </v-container>
     </section>
+    <!-- projects -->
     <section id="projects">
       <v-container>
         <h2 class="section-title">Projects</h2>
@@ -42,6 +45,7 @@
         </v-row>
       </v-container>
     </section>
+    <!-- skills -->
     <section id="skills">
       <h2 class="section-title">Skills</h2>
       <div class="wrapper">
@@ -57,6 +61,7 @@
         <p>G's ACADEMY TOKYO Hackathon(チーム開発) 準優勝</p>
       </div>
     </section>
+    <!-- about-me -->
     <section id="about-me">
       <h2 class="section-title">About me</h2>
       <div class="frame">
@@ -190,6 +195,11 @@ export default {
   font-size: 2rem;
   text-align: center;
   margin: 60px 0 30px 0;
+}
+
+#skills {
+  /* 移動位置の調整 */
+  padding-top: 30px;
 }
 
 .wrapper {
