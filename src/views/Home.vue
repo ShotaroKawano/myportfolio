@@ -135,7 +135,7 @@ export default {
           thumnail: 'gs-tokyo.png'
         },
         {
-          title: 'M&A アドバイザリー企業',
+          title: 'M&A アドバイザリー企業コーポレートサイト作成',
           period: '2020年3月',
           overview: 'WordPressにてコーポレイトサイト作成 \n多言語化対応',
           thumnail: 'icp-capital-investment.png'
