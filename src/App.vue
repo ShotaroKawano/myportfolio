@@ -37,9 +37,20 @@
 
     <v-app-bar color="green darken-4" dark app clipped-left>
       <!-- <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon> -->
-      <v-toolbar-title to="/">MyPortfolio</v-toolbar-title>
+      <v-toolbar-title
+        to="/"
+        v-if="$vuetify.breakpoint.smAndUp"
+      >
+        MyPortfolio
+      </v-toolbar-title>
+      <v-toolbar-title
+        to="/"
+        v-if="$vuetify.breakpoint.xsOnly"
+      >
+        <v-icon class="logo">mdi-palette</v-icon>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items>
+      <v-toolbar-items style="overflow-x: auto;">
         <v-btn text to="#products">Products</v-btn>
         <v-btn text to="#projects">Projects</v-btn>
         <v-btn text to="#skills">Skills</v-btn>
@@ -67,7 +78,7 @@
       <router-view />
     </v-main>
 
-    <v-footer color="green darken-4" dark app>
+    <v-footer color="green darken-4" dark class="footer">
       &copy;Shotaro Kawano
     </v-footer>
   </v-app>
@@ -158,3 +169,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.logo {
+  padding-right: 20px;
+}
+
+.footer {
+  text-align: center;
+}
+</style>

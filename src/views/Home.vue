@@ -59,6 +59,7 @@
         <p>G's ACADEMY TOKYO Hackathon 準優勝</p>
         <p>G's ACADEMY TOKYO- FUKUOKA 合同Hackathon 3位</p>
         <p>G's ACADEMY TOKYO Hackathon(チーム開発) 準優勝</p>
+        <a href="https://gsacademy.jp/reading/2020/11/0050/" target="blank">G's ACADEMY TOKYO GLOBAL GEEK AUDITION 準優勝</a>
       </div>
     </section>
     <!-- about-me -->
@@ -100,10 +101,10 @@ export default {
       products: [
         {
           title: 'Sinapse',
-          subtitle: 'ブックマークのシェアと検索ができるサービス',
+          subtitle: '検索から課題解決までの情報を体系的につなげるサービス',
           technology: 'Vue.js/d3.js/django/ \ndjango REST framework',
           overview: '情報同士のつながりを表現するため、フローチャート×ブックマークのUIを採用 \n\nURL:https://sinapse-production.netlify.app/ \n\nloginID:test@test.com \nloginPass:test',
-          videoId: '488219528'
+          videoId: '490669346'
         },
         {
           title: 'BOPS',
@@ -167,7 +168,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .main {
   background-color: #eee;
 }
@@ -205,6 +206,10 @@ export default {
 .wrapper {
   width: 70%;
   margin: 0 auto;
+
+  @media all and (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 #about-me {
@@ -212,9 +217,14 @@ export default {
 }
 
 .frame {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
+
+  @media all and (max-width: 600px) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .icon {
@@ -225,11 +235,22 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
+
+  @media all and (max-width: 600px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .introduction {
   width: 50%;
   padding: 24px;
+
+  @media all and (max-width: 600px) {
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px;
+  }
 }
 
 .intro-name {
